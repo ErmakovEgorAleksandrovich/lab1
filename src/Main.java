@@ -15,7 +15,7 @@ public class Main {
                 breakfast[i] = new Cheese();
             } else if (parts[0].equals("Яблоко")) {
                 breakfast[i] = new Apple(parts[1]);
-            } else if (parts[0].equals("кофе")) {
+            } else if (parts[0].equals("Кофе")) {
                 breakfast[i] = new Coffee(parts[1]);
             } else if (parts[0].startsWith("-") && parts[1].equals("sort")) {
                 sort = true;
@@ -66,21 +66,21 @@ public class Main {
         Coffee check = new Coffee("насыщенный");
         Coffee check2 = new Coffee("горький");
         Coffee check3 = new Coffee("восточный");
+        System.out.println("Аромат кофе " + ": ");
         for (int k = 0; k < breakfast.length; k++) {
             if (breakfast[k] != null) {
                 if (breakfast[k].equals(check)) {
-                    counter++;
+                    System.out.println(check.getNumber() + " ");
                 }
                 if(breakfast[k].equals(check2)){
-                    counter=counter +2;
+                    System.out.println(check2.getNumber() + " ");
                 }
                 if(breakfast[k].equals(check3)){
-                    counter=counter +3;
+                    System.out.println(check3.getNumber() + " ");
                 }
                 ;
             }
         }
-        System.out.println("Аромат кофе " + ": " + counter);
         counter = 0;
         for (int j = 0; j < breakfast.length;j++){
 
@@ -92,7 +92,7 @@ public class Main {
 
             }
         }
-        System.out.println("Количество продуктов заданного типа " + "'" +check2.getName() + "'" +check2.getNumber()+ ": " + counter);
+        System.out.println("Количество чашек заданного типа " + "'" +check2.getName() + "'" +check2.getNumber()+ ": " + counter);
         counter = 0;
         for (int j = 0; j < breakfast.length;j++){
 
@@ -104,19 +104,19 @@ public class Main {
 
             }
         }
-        System.out.println("Количество продуктов заданного типа " + "'" +check.getName() + "'" +check.getNumber()+ ": " + counter);
+        System.out.println("Количество чашек заданного типа " + "'" +check.getName() + "'" +check.getNumber()+ ": " + counter);
         counter = 0;
         for (int j = 0; j < breakfast.length;j++){
 
             if (breakfast[j] != null){
-                if (breakfast[j].equals(check)){
+                if (breakfast[j].equals(check3)){
                     counter++;
                 }
 
 
             }
         }
-        System.out.println("Количество продуктов заданного типа " + "'" +check3.getName() + "'" +check3.getNumber()+ ": " + counter);
+        System.out.println("Количество чашек заданного типа " + "'" +check3.getName() + "'" +check3.getNumber()+ ": " + counter);
         int calories = 0;
 
         if (cal == true){
